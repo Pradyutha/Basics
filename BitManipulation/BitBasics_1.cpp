@@ -6,6 +6,7 @@
 
 #define MAX_INT(a, b)     ((((int)(a)) > (int)(b)) ? (a) : (b))
 #define MAX_UINT(a, b)    ((((unsigned int)(a) > (unsigned int)(b)) ? (a) : (b) ))
+#define IS_BIT_SET(Num, bit)  (((Num & (0x1 << bit))? true : false))
 
 typedef unsigned int uint;
 
@@ -110,6 +111,16 @@ int main(int argc, char* argv[])
     Bits* Num3= new Bits(-0xFFF);
     Num3->NumberOfBits_Brute();
     Num3->NumberOfBits_Algo();
+
+    if(MAX_INT(3,2) == 3)
+    {
+        std::cout << " MAx is 3 " << std::endl;
+    }
+
+    if(IS_BIT_SET(0b1110, 3))
+    {
+        std::cout << " Bit 3 is set " << std::endl; 
+    }
 
     return 0; 
 }
