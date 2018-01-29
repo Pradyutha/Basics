@@ -1,6 +1,9 @@
 #include <iostream>
 #include <bitset>
 
+// Other things to see - 
+// 1. XOR and a^b = (a | b) & (~a | ~b)
+
 // MACRO DEFINITION EXAMPLES : 
 // Watch for syntax - #define MACRO(a,b) (a>b...)
 
