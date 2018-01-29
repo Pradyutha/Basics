@@ -27,6 +27,10 @@ class Bits
 
     void NumberOfBits_Algo();
 
+    int MultiplyByTwo();
+
+    int DivideByTwo();
+
   private:
 
     int   mNumber;
@@ -99,6 +103,25 @@ void Bits::NumberOfBits_Algo()
               << mNumber << " is : " << Count << std::endl;
 
 } // NumberOfBits_Algo
+
+// To Multiply by 2, Left shift by 1
+int Bits::MultiplyByTwo()
+{
+    if(mNumber == 0)
+      return 0;
+
+    return mNumber << 1;
+} // MultiplyByTwo
+
+// To Divide by 2, Right shift bit by 1
+int Bits::DivideByTwo()
+{
+    if(mNumber == 0)
+    {
+        return 0;
+    }
+    return mNumber >> 1;
+} // DivideByTwo
 
 int main(int argc, char* argv[])
 {
